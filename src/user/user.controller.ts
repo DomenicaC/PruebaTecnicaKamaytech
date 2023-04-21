@@ -1,21 +1,32 @@
 import { Controller, Post, Get, Delete, Put, Res, HttpStatus, Body } from '@nestjs/common';
-import { createUserDTO } from './dto/user.dto';
+import { CreateUserDTO } from './dto/user.dto';
+import { UserService } from "./user.service";
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
+import { User } from './interface/user.interface';
 
 
 @Controller('user')
 export class UserController {
 
+    constructor(private userService: UserService, @InjectModel("User") private readonly userModel: Model<User>) { }
+
 
     /* Create user */
     @Post('/create')
-    createUserPost(@Res() res, @Body() createUserDTO: createUserDTO) {
+    async createUserPost(@Res() res, @Body() createUserDTO: CreateUserDTO) {
 
-        console.log("User received ", createUserDTO);
-
+        const user = await this.userService.createUser(createUserDTO)
 
         /* Post Status*/
-        res.status(HttpStatus.OK).json({
-            message: 'received'
+        return res.status(HttpStatus.OK).json({
+            message: 'received',
+            user: user
         });
+    }
+
+    @Get('/listar')
+    async  listar(): Promise<User[]> {
+        return this.userModel.find().exec();
     }
 }
