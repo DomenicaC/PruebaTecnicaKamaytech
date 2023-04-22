@@ -63,10 +63,10 @@ $ npm run start:prod
 | 5 | Buscar usuario por ID     | GET    | https://pruebatecnicakamaytech-production.up.railway.app/user/getUser/"userID"           |
 | 6 | Listar todos los usuarios | POST   | https://pruebatecnicakamaytech-production.up.railway.app/user/getUsers                   |
 
-### Recomendacion
-#### - Consumo de links en Postman
-#### - Remplazar variable "userID" por 64435f08fdd404260f037297
-#### - Ejemplo: https://pruebatecnicakamaytech-production.up.railway.app/user/getUser/64435f08fdd404260f037297
+### Notas
+- Consumo de links en Postman
+- Remplazar variable "userID" por 64435f08fdd404260f037297
+- Ejemplo: https://pruebatecnicakamaytech-production.up.railway.app/user/getUser/64435f08fdd404260f037297
 
 ## Resultados
 
@@ -90,11 +90,31 @@ $ npm run start:prod
 ![image](https://user-images.githubusercontent.com/49033368/233762877-d4dd4921-f07c-4cc2-b209-0fc632654b67.png)
 
 
+## Conclusión
 
+Como conclusión, la generación de una API RESTful utilizando NestJS y MongoDB ha sido un proceso eficiente y escalable, permitiendo la implementación de los endpoints CRUD de manera sencilla y rápida. La elección del hosting de Railway ha facilitado el despliegue de la API y su integración con NestJS ha permitido una mayor eficiencia y escalabilidad en el proceso de desarrollo.
 
-## Soporte
+Se ha comprobado que el uso de Postman como herramienta para realizar pruebas en los diferentes endpoints es muy útil y práctico para validar el correcto funcionamiento de la API.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Además, se han discutido algunas recomendaciones para mejorar la eficiencia y escalabilidad de la API, como la implementación de un sistema de cacheo o la utilización de técnicas de optimización en la gestión de recursos.
+
+## Recomendaciones
+
+- Para evitar problemas al momento de desplegar la app en el host, ingresar la variable "PORT", esto hará referencia al puerto en el que esta nuestra app, en mi caso 3000.
+![image](https://user-images.githubusercontent.com/49033368/233763471-7e072d42-065c-4896-af35-8207f491c933.png)
+
+- Existen varias aplicaciones similares a Railway que se pueden considerar. Algunas de ellas son:
+
+  Google App Engine: Google App Engine es una plataforma en la nube que permite desplegar aplicaciones web de forma sencilla y escalable.
+
+  DigitalOcean App Platform: DigitalOcean App Platform es una plataforma fácil de usar y una gran variedad de opciones de configuración.
+  
+- Algunos consejos que podemos tener en cuenta son:
+
+    - Implementar caché: Utiliza herramientas como Redis o Memcached para almacenar en caché los resultados de las consultas frecuentes.
+
+    - Implementa paginación: Si la API devuelve grandes cantidades de datos, implementar paginación para limitar la cantidad de datos que se envían en cada solicitud y reducir la carga en el servidor.
+
 
 ## Información
 
