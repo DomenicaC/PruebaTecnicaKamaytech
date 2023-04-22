@@ -24,7 +24,7 @@
 
 ## Descripción
 
-En el presente informe se describe el proceso de generación de una API RESTful utilizando NestJS y MongoDB para implementar operaciones CRUD (Create, Read, Update, Delete). NestJS es un framework de Node.js que utiliza TypeScript para crear aplicaciones escalables y eficientes, mientras que MongoDB es una base de datos NoSQL que permite almacenar grandes cantidades de datos de forma flexible y escalable. El informe detalla los pasos necesarios para configurar el entorno de desarrollo, crear la estructura del proyecto, implementar los endpoints CRUD y la integración con MongoDB. También se ofrecen recomendaciones para mejorar la eficiencia y escalabilidad de la API. 
+En el presente informe se describe el proceso de generación de una API RESTful utilizando NestJS y MongoDB para implementar operaciones CRUD (Create, Read, Update, Delete). NestJS es un framework de Node.js que utiliza TypeScript para crear aplicaciones escalables y eficientes, mientras que MongoDB es una base de datos NoSQL que permite almacenar grandes cantidades de datos de forma flexible y escalable. El informe detalla la implementación de los endpoints CRUD y la integración con MongoDB. También se ofrecen recomendaciones para mejorar la eficiencia y escalabilidad de la API. 
 
 Además, se destaca la importancia de elegir un servicio de alojamiento adecuado, en este caso se recomendó Railway debido a su facilidad de uso y su integración con NestJS para simplificar el proceso de implementación y despliegue de la API RESTful generada. El informe también proporciona detalles sobre el proceso de despliegue de la API RESTful en Railway. 
 
